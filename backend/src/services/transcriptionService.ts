@@ -53,7 +53,7 @@ export const transcribeAudio = async (filePath: string): Promise<string> => {
   }
 };
 
-export const validateAudioFile = (filePath: string, maxSize: number = 52428800): boolean => {
+export const validateAudioFile = (filePath: string, maxSize: number = 209715200): boolean => {
   try {
     const stats = fs.statSync(filePath);
     

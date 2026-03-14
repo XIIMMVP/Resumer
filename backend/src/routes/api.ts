@@ -31,7 +31,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage,
-  limits: { fileSize: parseInt(process.env.MAX_FILE_SIZE || '52428800') },
+  limits: { fileSize: parseInt(process.env.MAX_FILE_SIZE || '209715200') }, // 200MB
 });
 
 // POST /api/process - Upload and process audio file
@@ -51,7 +51,7 @@ router.post('/process', upload.single('audio'), async (req: Request, res: Respon
 
     // Validate audio file
     try {
-      validateAudioFile(filePath, parseInt(process.env.MAX_FILE_SIZE || '52428800'));
+      validateAudioFile(filePath, parseInt(process.env.MAX_FILE_SIZE || '209715200'));
     } catch (validationError: any) {
       updateAudioRecord(record.id, {
         status: 'error',

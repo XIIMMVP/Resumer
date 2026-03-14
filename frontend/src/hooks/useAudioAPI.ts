@@ -1,6 +1,9 @@
 import { useState } from 'react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+const isDev = import.meta.env.DEV;
+const API_URL = isDev 
+  ? (import.meta.env.VITE_API_URL || 'http://localhost:5001/api')
+  : '/api';
 
 export interface AudioRecord {
   id: string;
