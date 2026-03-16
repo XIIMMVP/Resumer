@@ -14,7 +14,7 @@ import { generateSummary, validateTranscript } from '../services/summaryService'
 const router = Router();
 
 // Configure multer for file uploads
-const uploadDir = process.env.UPLOAD_DIR || './uploads';
+const uploadDir = process.env.UPLOAD_DIR || '/tmp/uploads';
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }

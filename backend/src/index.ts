@@ -9,7 +9,7 @@ import { initializeDatabase } from './db/schema';
 import apiRoutes from './routes/api';
 
 const app = express();
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 7860;
 
 // Middleware
 app.use(cors());
