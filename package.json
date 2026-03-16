@@ -12,12 +12,15 @@
     "start": "npm start --workspace=backend",
     "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\""
   },
-  "devDependencies": {
+  "dependencies": {
     "concurrently": "^8.2.2",
-    "typescript": "^5.3.3",
     "vite": "^8.0.0",
     "@vitejs/plugin-react": "^6.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
   }
 }
+
 
 
